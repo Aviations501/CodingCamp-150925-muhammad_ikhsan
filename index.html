@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List App</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-wrapper">
+            <h1 class="title">Todo List</h1>
+            
+            <!-- Form Input -->
+            <form class="todo-form" id="todoForm">
+                <div class="input-group">
+                    <input type="text" id="taskInput" placeholder="Add a todo..." required>
+                    <input type="date" id="dateInput" required>
+                    <button type="submit" class="add-btn">+</button>
+                </div>
+            </form>
+            
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <div class="filter-buttons">
+                    <span class="filter-label">FILTER</span>
+                    <button class="filter-btn active" data-filter="all">ALL</button>
+                    <button class="filter-btn" data-filter="pending">PENDING</button>
+                    <button class="filter-btn" data-filter="completed">COMPLETED</button>
+                </div>
+                <button class="delete-all-btn" id="deleteAllBtn">DELETE ALL</button>
+            </div>
+            
+            <!-- Table Header -->
+            <div class="table-header">
+                <div class="header-item task-col">TASK</div>
+                <div class="header-item date-col">DUE DATE</div>
+                <div class="header-item status-col">STATUS</div>
+                <div class="header-item actions-col">ACTIONS</div>
+            </div>
+            
+            <!-- Todo List -->
+            <div class="todo-list" id="todoList">
+                <div class="empty-state">No task founds</div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
